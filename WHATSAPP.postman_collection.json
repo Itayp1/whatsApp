@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "1d2bf3f8-ea78-4dd7-b6cb-e8d0b2613293",
+		"name": "WHATSAPP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5780833"
+	},
+	"item": [
+		{
+			"name": "temlete 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "graph.facebook.com"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "accept-language",
+						"value": "he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "origin",
+						"value": "https://developers.facebook.com"
+					},
+					{
+						"key": "referer",
+						"value": "https://developers.facebook.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"Google Chrome\";v=\"116\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_reqName",
+							"value": "object:phone-number-id/messages",
+							"type": "text"
+						},
+						{
+							"key": "_reqSrc",
+							"value": "WhatsAppBusinessSendMessageCAPI",
+							"type": "text"
+						},
+						{
+							"key": "locale",
+							"value": "en_US",
+							"type": "text"
+						},
+						{
+							"key": "messaging_product",
+							"value": "whatsapp",
+							"type": "text"
+						},
+						{
+							"key": "method",
+							"value": "post",
+							"type": "text"
+						},
+						{
+							"key": "pretty",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "suppress_http_code",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "template",
+							"value": "{\"name\":\"hello_world\",\"language\":{\"code\":\"en_US\"}}",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "972587107691",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "template",
+							"type": "text"
+						},
+						{
+							"key": "xref",
+							"value": "f37203fb831bfa8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v17.0/113481255179838/messages?access_token=EAAyW0AzZB8ZBsBO0ZBH4djZB7Kc74zfMJDfFqqfZB8ZCqsvqQLqMqGiXDg44ZC3V5vxO0ybrcvZA5SF7o6x1EZCVZC53M6aPZB555j85Wu71xDQFbCyeZBvDr39w8K296blqJlocRYeG2sLyEZCX5ZBJVRrWrm1e2wZAuTXqnxxcSLnGdeZAZByQPhZA4yEpZCu1ZC0aZBpLfzCtJq2JKEHBZBIzHFM74U&__cppo=1",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v17.0",
+						"113481255179838",
+						"messages"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAyW0AzZB8ZBsBO0ZBH4djZB7Kc74zfMJDfFqqfZB8ZCqsvqQLqMqGiXDg44ZC3V5vxO0ybrcvZA5SF7o6x1EZCVZC53M6aPZB555j85Wu71xDQFbCyeZBvDr39w8K296blqJlocRYeG2sLyEZCX5ZBJVRrWrm1e2wZAuTXqnxxcSLnGdeZAZByQPhZA4yEpZCu1ZC0aZBpLfzCtJq2JKEHBZBIzHFM74U"
+						},
+						{
+							"key": "__cppo",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "temlete 2 sent otp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "graph.facebook.com"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "accept-language",
+						"value": "he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "origin",
+						"value": "https://developers.facebook.com"
+					},
+					{
+						"key": "referer",
+						"value": "https://developers.facebook.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"Google Chrome\";v=\"116\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_reqName",
+							"value": "object:phone-number-id/messages",
+							"type": "text"
+						},
+						{
+							"key": "_reqSrc",
+							"value": "WhatsAppBusinessSendMessageCAPI",
+							"type": "text"
+						},
+						{
+							"key": "locale",
+							"value": "en_US",
+							"type": "text"
+						},
+						{
+							"key": "messaging_product",
+							"value": "whatsapp",
+							"type": "text"
+						},
+						{
+							"key": "method",
+							"value": "post",
+							"type": "text"
+						},
+						{
+							"key": "pretty",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "suppress_http_code",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "template",
+							"value": "{\"name\":\"hello_world\",\"language\":{\"code\":\"en_US\"}}",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "972587107691",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "template",
+							"type": "text"
+						},
+						{
+							"key": "xref",
+							"value": "f37203fb831bfa8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v17.0/113481255179838/messages?access_token=EAAyW0AzZB8ZBsBO0ZBH4djZB7Kc74zfMJDfFqqfZB8ZCqsvqQLqMqGiXDg44ZC3V5vxO0ybrcvZA5SF7o6x1EZCVZC53M6aPZB555j85Wu71xDQFbCyeZBvDr39w8K296blqJlocRYeG2sLyEZCX5ZBJVRrWrm1e2wZAuTXqnxxcSLnGdeZAZByQPhZA4yEpZCu1ZC0aZBpLfzCtJq2JKEHBZBIzHFM74U&__cppo=1",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v17.0",
+						"113481255179838",
+						"messages"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAyW0AzZB8ZBsBO0ZBH4djZB7Kc74zfMJDfFqqfZB8ZCqsvqQLqMqGiXDg44ZC3V5vxO0ybrcvZA5SF7o6x1EZCVZC53M6aPZB555j85Wu71xDQFbCyeZBvDr39w8K296blqJlocRYeG2sLyEZCX5ZBJVRrWrm1e2wZAuTXqnxxcSLnGdeZAZByQPhZA4yEpZCu1ZC0aZBpLfzCtJq2JKEHBZBIzHFM74U"
+						},
+						{
+							"key": "__cppo",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sent replay message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to\":\"972587107691\",\r\n    \"messaging_product\":\"whatsapp\" ,\r\n    \"text\":{\r\n        \"body\":\"היי מה קורה\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v17.0/113481255179838/messages?access_token=EAAyW0AzZB8ZBsBO0ZBH4djZB7Kc74zfMJDfFqqfZB8ZCqsvqQLqMqGiXDg44ZC3V5vxO0ybrcvZA5SF7o6x1EZCVZC53M6aPZB555j85Wu71xDQFbCyeZBvDr39w8K296blqJlocRYeG2sLyEZCX5ZBJVRrWrm1e2wZAuTXqnxxcSLnGdeZAZByQPhZA4yEpZCu1ZC0aZBpLfzCtJq2JKEHBZBIzHFM74U&__cppo=1",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v17.0",
+						"113481255179838",
+						"messages"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAyW0AzZB8ZBsBO0ZBH4djZB7Kc74zfMJDfFqqfZB8ZCqsvqQLqMqGiXDg44ZC3V5vxO0ybrcvZA5SF7o6x1EZCVZC53M6aPZB555j85Wu71xDQFbCyeZBvDr39w8K296blqJlocRYeG2sLyEZCX5ZBJVRrWrm1e2wZAuTXqnxxcSLnGdeZAZByQPhZA4yEpZCu1ZC0aZBpLfzCtJq2JKEHBZBIzHFM74U"
+						},
+						{
+							"key": "__cppo",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
