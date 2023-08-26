@@ -1,0 +1,19 @@
+apiVersion: "networking.k8s.io/v1"
+kind: "Ingress"
+metadata:
+  name: "whatsapp-bot-k8s"
+  namespace: "qa"
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+    - host: "whatsapp-bot-k8s-qa.digital-cloud-services.com"
+      http:
+        paths:
+          - pathType: "Prefix"
+            path: "/"
+            backend:
+              service:
+                name: "whatsapp-bot-k8s"
+                port:
+                  number: 443

@@ -1,0 +1,37 @@
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "whatsapp-bot-k8s"
+  namespace: "qa"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "whatsapp-bot-k8s"
+  template:
+    metadata:
+      labels:
+        app: "whatsapp-bot-k8s"
+    spec:
+      containers:
+        - name: "whatsapp-bot-k8s"
+          image: "itayp/whatsapp-bot-k8s:6"
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: "/health"
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: "/health"
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 3
+          env:
+            - name: "SERVICE_NAME"
+              value: "whatsapp"
+            - name: "ENV"
+              value: "qa"
