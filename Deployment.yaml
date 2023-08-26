@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: "whatsapp-bot-k8s"
-          image: "itayp/whatsapp-bot-k8s:6"
+          image: "itayp/whatsapp-bot-k8s:7"
           ports:
             - containerPort: 3000
           livenessProbe:
