@@ -6,6 +6,7 @@ const axios = require("axios");
 dotenv.config();
 const { sendMessages } = require("./openai");
 const whatsApp = require("./whatsApp");
+const md5 = require("md5");
 
 app.use(bodyParser.json()); // for parsing application/json
 app.get("/health", async (req, res) => {
@@ -60,7 +61,7 @@ app.get("/webhook", function (req, res) {
 
 //   res.status(200);
 // });
-
+const cache = {};
 messageArr = [];
 //webhook on new message
 app.post("/webhook", async function (req, res) {
@@ -74,11 +75,19 @@ app.post("/webhook", async function (req, res) {
       } else {
         messageArr = [currentIncomeMessage];
       }
+      console.log(`get message from phone msg ${msg} `);
+      let completion;
+      const md5Msg = md5(msg);
+      console.log(md5Msg);
+      if (cache[md5Msg]) {
+        console.log(`get response from the cache`);
+        completion = cache[md5Msg];
+      } else {
+        console.log(`get response from the ai res`);
 
-      console.log(messageArr);
-
-      const completion = await sendMessages(messageArr);
-      console.log(completion.choices[0].message);
+        completion = await sendMessages(messageArr);
+        cache[md5Msg] = completion;
+      }
       messageArr.push(completion.choices[0].message);
 
       res.send(completion.choices[0].message);
